@@ -1,0 +1,27 @@
+/* Midnight Ramen Rush — page style. One job: centre the canvas on a
+   dark page and keep it readable at any window size. */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0d0918;
+  min-height: 100%;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+#game {
+  display: block;
+  /* Fit the viewport while keeping the 1280:720 aspect: at a 1280x720
+     viewport the canvas is exactly 1280x720; in a shorter window it
+     shrinks instead of cropping (headless Chrome's viewport is shorter
+     than its window). */
+  width: min(1280px, 100vw, 177.78vh);
+  height: auto;
+  background: #171226;
+  image-rendering: auto;
+}
